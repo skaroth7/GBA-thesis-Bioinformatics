@@ -6,7 +6,7 @@ conda create -n new_enviornment
 then activate this enviornment:
 conda activate new_enviornment
 
-The follow packgaes are required:
+The follow packages are required:
 minimap2
 samtools
 qualimap
