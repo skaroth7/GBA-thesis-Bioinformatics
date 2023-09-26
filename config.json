@@ -1,0 +1,7 @@
+{
+    "data": "/WORKSPACE/Oscar/snake_make_workflows/example",
+    "reference": "/WORKSPACE/Oscar/snake_make_workflows/example/reference_sequence/GBA.fasta",
+    "fast5": "/WORKSPACE/Oscar/snake_make_workflows/example/fast5_pass",
+    "nanopolish_reference": GBA_Reference:0-6945
+	"sequencing_summary": "/WORKSPACE/Oscar/snake_make_workflows/example/sequencing_summary.txt"
+}
