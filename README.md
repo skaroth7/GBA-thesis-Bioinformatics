@@ -1,27 +1,27 @@
-Runs on the Conda package, so first you need to install conda.
+#Runs on the Conda package, so first you need to install conda.
 
-On conda then create a new Enviornment:
-conda create -n new_enviornment
+#On conda then create a new Enviornment:
+#conda create -n new_enviornment
 
-then activate this enviornment:
-conda activate new_enviornment
+#then activate this enviornment:
+#conda activate new_enviornment
 
-The follow packages are required:
-minimap2
-samtools
-qualimap
-samtools
-nanopolish- nanopolish needs to be installed manually. Then Specify directory in the config file
-whatshap
-bcftools
-snakemake
-conda install -c conda-forge bzip2
-conda install -c anaconda hdf5
+#The follow packages are required:
+#minimap2
+#samtools
+#qualimap
+#samtools
+#nanopolish- nanopolish needs to be installed manually. Then Specify directory in the config file
+#whatshap
+#bcftools
+#snakemake
+#conda install -c conda-forge bzip2
+#conda install -c anaconda hdf5
 
-Use
-conda install -n new_envionrnment [package_name] (conda install -c bioconda minimap2 may be needed))
+#Use
+#conda install -n new_envionrnment [package_name] (conda install -c bioconda minimap2 may be needed))
 
-Place the Snakefile in the Enviornment along with the config.json file then:
+#Place the Snakefile in the Enviornment along with the config.json file then:
 
 
 modify the config file to specificy the base directory, the reference sequence, the fast5 file, the sequencing summary file and the nanopolish reference name and coordinates: 
