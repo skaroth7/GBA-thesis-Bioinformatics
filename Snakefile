@@ -41,7 +41,7 @@ rule get_info_site_qual:
         config['data']+"/vcf_files/barcode{sample}_total_reads.INFO",
     
     params:
-        pvcf = config['data']+"/vcf_files/barcode{sample}.phased.vcf",
+        pvcf = config['data']+"/vcf_files/phased_barcode{sample}.vcf",
         qual = config['data']+"/vcf_files/barcode{sample}_site_qual",
         
     output:
