@@ -1,6 +1,9 @@
 #Create conda container
 - conda create -n ONT_amplicon_pipeline
 
+#Activate conda environment
+- conda activate ONT_amplicon_pipeline
+
 #requirements 
 Install requirements
 - conda install bcftools
