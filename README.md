@@ -15,7 +15,7 @@ Install requirements
 - conda install snakemake
 - conda install qualimap
 
-#first run preapre_fastq_data.py
+#first run prepare_fastq_data.py
 - python3 prepare_fastq_data.py "/sequenceout_directory/"
 
 #modify the config.json to specify your required sequencing files
