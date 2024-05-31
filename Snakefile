@@ -19,7 +19,7 @@ rule all:
         imp = config['data']+"/vcf_files/"
         
     shell:
-        "bcftools merge {params.imp}*.gz > {params.out} --force-samples | cat {params.imp}*.lqual > {params.imp}_merged_qual_score.lqual | cat {params.imp}*.INFO > {params.imp}_merged_total_reads.INFO"
+        "bcftools merge {params.imp}*.gz > {params.out} --force-samples --missing-to-ref | cat {params.imp}*.lqual > {params.imp}_merged_qual_score.lqual | cat {params.imp}*.INFO > {params.imp}_merged_total_reads.INFO"
   
         
 rule get_tot_reads:
