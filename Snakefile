@@ -67,8 +67,10 @@ rule adapter_trimming:
 		config['data']+"/fastq_merged/barcode{sample}.fastq"
 	output:
 		fastq = config['data']+"/fastq_trimmed/trimmed_barcode{sample}.fastq"
+	params:
+		threads = config['threads']
 	shell:
-		"porechop -i {input} -o {output.fastq} --threads 1"
+		"porechop -i {input} -o {output.fastq} --threads {params.threads}"
 
 rule Alignement:
     input:
@@ -78,10 +80,11 @@ rule Alignement:
         config['data']+"/alignment_files/barcode{sample}.bam"
 
     params:
-        ref = config['reference']
+        ref = config['reference'],
+		threads = config['threads']
 
     shell:
-        "minimap2 -ax map-ont {params.ref} {input.fastq} --secondary=no | samtools sort -o {output}"
+        "minimap2 -ax map-ont {params.ref} {input.fastq} --secondary=no -t {params.threads}| samtools sort -o {output}"
 
 rule samtools_index:
     input:
@@ -114,13 +117,14 @@ rule variant_calling:
 
     params:
         ref = config['reference'],
-        nanref = config['nanopolish_reference']
+        nanref = config['nanopolish_reference'],
+		threads = config['threads]
 
     output:
         config['data']+"/vcf_files/barcode{sample}.vcf",
 
     shell:
-        "nanopolish variants -g {params.ref} -r {input.fastq} -b {input.bam} --min-candidate-frequency 0.2 -w {params.nanref} --ploidy 2 -o {output} -d 10"
+        "nanopolish variants -g {params.ref} -t {params.threads} -r {input.fastq} -b {input.bam} --min-candidate-frequency 0.2 -w {params.nanref} --ploidy 2 -o {output} -d 10"
 
 rule phasing:
     input:
