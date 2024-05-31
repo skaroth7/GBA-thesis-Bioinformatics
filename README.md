@@ -17,5 +17,5 @@ Install requirements
 
 #modify the config.json to specify your required sequencing files
 
-#run the snakemake pipeline
--snakemake "snakefile" --cores INT
+run the snakemake pipeline
+- snakemake "snakefile" --cores INT
