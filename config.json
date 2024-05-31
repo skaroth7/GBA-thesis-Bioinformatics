@@ -1,7 +1,8 @@
 {
-    "data": "/WORKSPACE/Oscar/snake_make_workflows/example",
-    "reference": "/WORKSPACE/Oscar/snake_make_workflows/example/reference_sequence/GBA.fasta",
-    "fast5": "/WORKSPACE/Oscar/snake_make_workflows/example/fast5_pass",
-    "nanopolish_reference": GBA_Reference:0-6945
-	"sequencing_summary": "/WORKSPACE/Oscar/snake_make_workflows/example/sequencing_summary.txt"
+    "data": "/WORKSPACE/Oscar/test_new_snakemake_30_05_24/OG_15_04_24_PEGS6/20240415_1341_X4_ASU393_50637ee3",
+    "reference": "/WORKSPACE/Oscar/Reference_Sequence/GBA.fasta",
+    "fast5": "/WORKSPACE/Oscar/test_new_snakemake_30_05_24/OG_15_04_24_PEGS6/20240415_1341_X4_ASU393_50637ee3/fast5_pass",
+    "sequencing_summary": "/WORKSPACE/Oscar/test_new_snakemake_30_05_24/OG_15_04_24_PEGS6/20240415_1341_X4_ASU393_50637ee3/sequencing_summary_ASU393_50637ee3_6c5032c5.txt",
+    "nanopolish_reference": "GBA_Reference:0-6945"
+
 }
