@@ -1,10 +1,10 @@
-#Create conda container
+Create conda container
 - conda create -n ONT_amplicon_pipeline
 
-#Activate conda environment
+Activate conda environment
 - conda activate ONT_amplicon_pipeline
 
-#requirements 
+Requirements:
 Install requirements
 - conda install bcftools
 - conda install vcftools
@@ -15,11 +15,11 @@ Install requirements
 - conda install snakemake
 - conda install qualimap
 
-#first run prepare_fastq_data.py
+First run prepare_fastq_data.py
 - place the prepare_fastq_data.py file into the base directory containing all of the sequencing output folders
 - python3 prepare_fastq_data.py "/sequenceout_directory/"
 
-#modify the config.json to specify your required sequencing files and number of cores per sample. Additionally, you can run multiple samples using multiple threads by specifying the number of cores when running the snakefile with the instructions described below (INT = number of samples to run together).
+Modify the config.json to specify your required sequencing files and number of cores per sample. Additionally, you can run multiple samples using multiple threads by specifying the number of cores when running the snakefile with the instructions described below (INT = number of samples to run together).
 
-run the snakemake pipeline
+Run the snakemake pipeline
 - snakemake "snakefile" --cores INT
