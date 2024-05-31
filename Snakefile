@@ -78,11 +78,10 @@ rule Alignement:
         config['data']+"/alignment_files/barcode{sample}.bam"
 
     params:
-        ref = config['reference'],
-        qual = "barcode{sample}.bam.pdf"
+        ref = config['reference']
 
     shell:
-        "minimap2 -ax map-ont {params.ref} {input.fastq} --secondary=no | samtools sort -o {output} | qualimap bamqc -bam {output} -outfile {params.qual}"
+        "minimap2 -ax map-ont {params.ref} {input.fastq} --secondary=no | samtools sort -o {output}"
 
 rule samtools_index:
     input:
