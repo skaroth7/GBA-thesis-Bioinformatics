@@ -13,7 +13,6 @@ Install requirements
 - conda install nanopolish
 - conda install whatshap
 - conda install snakemake
-- conda install qualimap
 
 First run prepare_fastq_data.py
 - place the prepare_fastq_data.py file into the base directory containing all of the sequencing output folders
