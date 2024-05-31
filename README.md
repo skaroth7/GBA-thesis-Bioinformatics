@@ -21,4 +21,6 @@ First run prepare_fastq_data.py
 Modify the config.json to specify your required sequencing files and number of cores per sample. Additionally, you can run multiple samples using multiple threads by specifying the number of cores when running the snakefile with the instructions described below (INT = number of samples to run together).
 
 Run the snakemake pipeline
-- snakemake "snakefile" --cores INT
+- cd to the directory containing the snakefile
+- i.e| cd "/WORKSPACE/snakemake_files/"
+- snakemake --cores INT
