@@ -81,7 +81,7 @@ rule Alignement:
 
     params:
         ref = config['reference'],
-		threads = config['threads']
+		    threads = config['threads']
 
     shell:
         "minimap2 -ax map-ont {params.ref} {input.fastq} --secondary=no -t {params.threads}| samtools sort -o {output}"
@@ -118,7 +118,7 @@ rule variant_calling:
     params:
         ref = config['reference'],
         nanref = config['nanopolish_reference'],
-		threads = config['threads]
+        threads = config['threads']
 
     output:
         config['data']+"/vcf_files/barcode{sample}.vcf",
