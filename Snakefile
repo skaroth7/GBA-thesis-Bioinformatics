@@ -10,6 +10,9 @@ configfile:
 sample_dirs = glob.glob(config['data'] + "/fastq_pass/barcode*/")
 SAMPLES = [os.path.basename(os.path.normpath(d)).replace('barcode', '') for d in sample_dirs]
 
+##If some of the folders contain samples with barcodes with two low counts, the script may fail at some stage. To resolve this remove the fastq merged files with low sequencing depth and replace the two lines above with:
+#SAMPLES, = glob_wildcards(config['data']+"/fastq_merged/barcode{id}.fastq")
+
 rule all:
     input:
         expand(config['data']+"/vcf_files/barcode{sample}_site_qual.lqual", sample=SAMPLES)
